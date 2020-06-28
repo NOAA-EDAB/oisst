@@ -29,8 +29,25 @@ remotes::install_github("andybeet/oisst")
 
 To download a single years data (year 2001 in example) into a folder called "output" within your current directory
 
-``` r
+``` 
 oisst::get_oisst_data(years=2001,outputStructure=NULL,outputDir=here::here("output"))
 
 ```
 
+To download years 2000, ..., 2010 into yearly folders within the "output" folder in current working directory:
+
+```
+oisst::get_oisst_data(years=2000:2010,outputStructure="year",outputDir=here::here("output"))
+```
+
+To download years 2000, ..., 2005 into a single folder within the "output" folder in current working directory:
+
+```
+oisst::get_oisst_data(years=2000:2005,outputStructure=NULL,outputDir=here::here("output"))
+```
+
+To download all data into monthly folders within the "output" folder in current working directory:
+
+```
+ooist::get_oisst_data(years=NULL,outputStructure="month",outputDir=here::here("output"))
+```

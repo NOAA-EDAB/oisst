@@ -40,22 +40,23 @@ get_oisst_data <- function(years=2000,outputStructure=NULL,outputDir){
     dir.create(outputDir,recursive=TRUE)
   }
   # yearly or monthly folders created
-  if (tolower(outputStructure) == "year") {
-    for (ayear in years) {
-      if(!dir.exists(file.path(outputDir,ayear))){
-        dir.create(file.path(outputDir,ayear),recursive=TRUE)
-      } 
+  if (!is.null(outputStructure)) {
+    if (tolower(outputStructure) == "year") {
+      for (ayear in years) {
+        if(!dir.exists(file.path(outputDir,ayear))){
+          dir.create(file.path(outputDir,ayear),recursive=TRUE)
+        } 
+      }
+    } else if (tolower(outputStructure) == "month") {
+      for (im in 1:12) {
+        if(!dir.exists(file.path(outputDir,sprintf("%02d",im)))){
+          dir.create(file.path(outputDir,sprintf("%02d",im)),recursive=TRUE)
+        } 
+      }
+    } else  {
+      stop("outputStructure must either be NULL, Year, Month")
     }
-  } else if (tolower(outputStructure) == "month") {
-    for (im in 1:12) {
-      if(!dir.exists(file.path(outputDir,sprintf("%02d",im)))){
-        dir.create(file.path(outputDir,sprintf("%02d",im)),recursive=TRUE)
-      } 
-    }
-  } else if (!is.null(outputStructure)) {
-    stop("outputStructure must either be NULL, Year, Month")
   }
-  
 
   #url where all data is stored
   dataPath <- "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr"

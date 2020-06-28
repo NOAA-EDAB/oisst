@@ -20,7 +20,9 @@
 
 
 find_file_structure <- function(years=NULL){
-  years <- as.character(years)
+  if (!is.null(years)) {
+    years <- as.character(years)
+  }
   #url where all data is stored
   dataPath <- "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/"
 

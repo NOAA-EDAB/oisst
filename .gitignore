@@ -3,6 +3,8 @@
 .RData
 .Ruserdata
 
+# files
+*.Rproj
 #folders
 output
 test

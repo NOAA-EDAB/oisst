@@ -7,17 +7,17 @@
 get_oisst_data(years = 2000, outputStructure = NULL, outputDir)
 }
 \arguments{
-\item{years}{numeric vector. Years of data to download. Default = 2000. options: NULL (All data is downloaded)}
+\item{years}{Numeric vector. Years of data to download. Default = 2000. options: NULL (All data is downloaded)}
 
-\item{outputStructure}{character. Determines how downloaded data will be structured. Default = NULL (All files downloaded to a single directory), options: "Year" (Data downloaded into Yearly folders),"Month" (Downloaded into Monthly Folders)}
+\item{outputStructure}{Character string. Determines how downloaded data will be structured. Default = NULL (All files downloaded to a single directory), options: "Year" (Data downloaded into Yearly folders),"Month" (Downloaded into Monthly Folders)}
 
-\item{outputDir}{string. Full path to local machine where output files will be downloaded}
+\item{outputDir}{Character string. Full path to local machine where output files will be downloaded}
 }
 \value{
 Nothing. Files downloaded
 }
 \description{
-Pulls data from oisst website and downloads to local machine
+Pulls data from NOAAs Optimum Interpolation Sea Surface Temperature (OISST) website and downloads to local machine
 }
 \examples{
 \dontrun{

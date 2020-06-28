@@ -27,6 +27,13 @@ remotes::install_github("andybeet/oisst")
 
 ## Usage
 
+To determine which years have data:
+
+``` {r, eval = T}
+oisst::find_years()
+```
+
+
 To download a single years data (year 2001 in example) into a folder called "output" within your current directory
 
 ``` 

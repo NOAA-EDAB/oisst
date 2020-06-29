@@ -92,7 +92,7 @@ get_oisst_data <- function(years=2000,outputStructure=NULL,outputDir){
        # get file, catch error for missing file
        result <- tryCatch(
          {
-           downloader::download(fpath,destfile=destfile,quiet=TRUE)
+           downloader::download(fpath,destfile=destfile,quiet=TRUE,mode="wb")
            res <- TRUE
          },
          error = function(e){

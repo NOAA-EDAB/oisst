@@ -4,6 +4,8 @@
 # oisst
 
 <!-- badges: start -->
+
+![gitleaks](https://github.com/NOAA-EDAB/oisst/workflows/gitleaks/badge.svg)
 <!-- badges: end -->
 
 The goal of `oisst` is to easily download [Optimum Interpolation Sea
@@ -13,7 +15,7 @@ hosted by National Oceanic and Atmospheric Administration (NOAA).
 ## Installation
 
 ``` r
-remotes::install_github("andybeet/oisst")
+remotes::install_github("NOAA-EDAB/oisst")
 ```
 
 ## Usage
@@ -48,6 +50,12 @@ To download all data into monthly folders within the “output” folder in
 current working directory:
 
     ooist::get_oisst_data(years=NULL,outputStructure="month",outputDir=here::here("output"))
+
+## Contact
+
+| [andybeet](https://github.com/andybeet)                                                         |
+|-------------------------------------------------------------------------------------------------|
+| [![](https://avatars1.githubusercontent.com/u/22455149?s=100&v=4)](https://github.com/andybeet) |
 
 #### Legal disclaimer
 

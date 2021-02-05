@@ -63,13 +63,13 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#oisst" class="anchor"></a>oisst</h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
+<p><img src="https://github.com/NOAA-EDAB/oisst/workflows/gitleaks/badge.svg" alt="gitleaks"><!-- badges: end --></p>
 <p>The goal of <code>oisst</code> is to easily download <a href="https://www.ncdc.noaa.gov/oisst">Optimum Interpolation Sea Surface Temperature (OISST)</a> data hosted by National Oceanic and Atmospheric Administration (NOAA).</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"andybeet/oisst"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"NOAA-EDAB/oisst"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
@@ -90,6 +90,18 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>oisst<span class="op">::</span><span class="kw">get_oisst_data</span>(<span class="dt">years=</span><span class="dv">2000</span><span class="op">:</span><span class="dv">2005</span>,<span class="dt">outputStructure=</span><span class="ot">NULL</span>,<span class="dt">outputDir=</span>here<span class="op">::</span><span class="kw">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
 <p>To download all data into monthly folders within the “output” folder in current working directory:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>ooist<span class="op">::</span><span class="kw">get_oisst_data</span>(<span class="dt">years=</span><span class="ot">NULL</span>,<span class="dt">outputStructure=</span><span class="st">"month"</span>,<span class="dt">outputDir=</span>here<span class="op">::</span><span class="kw">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
+</div>
+<div id="contact" class="section level2">
+<h2 class="hasAnchor">
+<a href="#contact" class="anchor"></a>Contact</h2>
+<table class="table">
+<thead><tr class="header">
+<th><a href="https://github.com/andybeet">andybeet</a></th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><a href="https://github.com/andybeet"><img src="https://avatars1.githubusercontent.com/u/22455149?s=100&amp;v=4"></a></td>
+</tr></tbody>
+</table>
 <div id="legal-disclaimer" class="section level4">
 <h4 class="hasAnchor">
 <a href="#legal-disclaimer" class="anchor"></a>Legal disclaimer</h4>

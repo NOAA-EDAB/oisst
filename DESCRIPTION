@@ -7,6 +7,8 @@ Authors@R:
            email = "andrew.beet@noaa.gov")
 Description: Extracts all oisst data from NOAA website
 License: file LICENSE
+URL: https://github.com/andybeet/oisst
+BugReports: https://github.com/andybeet/oisst/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0

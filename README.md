@@ -15,7 +15,7 @@ hosted by National Oceanic and Atmospheric Administration (NOAA).
 ## Installation
 
 ``` r
-remotes::install_github("NOAA-EDAB/oisst")
+remotes::install_github("andybeet/oisst")
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ oisst::find_years()
 #> [11] "1991" "1992" "1993" "1994" "1995" "1996" "1997" "1998" "1999" "2000"
 #> [21] "2001" "2002" "2003" "2004" "2005" "2006" "2007" "2008" "2009" "2010"
 #> [31] "2011" "2012" "2013" "2014" "2015" "2016" "2017" "2018" "2019" "2020"
-#> [41] "2021"
+#> [41] "2021" "2022"
 ```
 
 To download a single years data (year 2001 in example) into a folder

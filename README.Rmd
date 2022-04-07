@@ -23,7 +23,7 @@ The goal of `oisst` is to easily download [Optimum Interpolation Sea Surface Tem
 ## Installation
 
 ``` r
-remotes::install_github("NOAA-EDAB/oisst")
+remotes::install_github("andybeet/oisst")
 ```
 
 ## Usage

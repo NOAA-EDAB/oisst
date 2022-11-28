@@ -72,32 +72,33 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"andybeet/oisst"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"andybeet/oisst"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <p>To determine which years have data:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">oisst</span><span class="fu">::</span><span class="fu"><a href="reference/find_years.html">find_years</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt;  [1] "1981" "1982" "1983" "1984" "1985" "1986" "1987" "1988" "1989" "1990"</span>
-<span class="co">#&gt; [11] "1991" "1992" "1993" "1994" "1995" "1996" "1997" "1998" "1999" "2000"</span>
-<span class="co">#&gt; [21] "2001" "2002" "2003" "2004" "2005" "2006" "2007" "2008" "2009" "2010"</span>
-<span class="co">#&gt; [31] "2011" "2012" "2013" "2014" "2015" "2016" "2017" "2018" "2019" "2020"</span>
-<span class="co">#&gt; [41] "2021" "2022"</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">oisst</span><span class="fu">::</span><span class="fu"><a href="reference/find_years.html">find_years</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] "1981" "1982" "1983" "1984" "1985" "1986" "1987" "1988" "1989" "1990"</span></span>
+<span><span class="co">#&gt; [11] "1991" "1992" "1993" "1994" "1995" "1996" "1997" "1998" "1999" "2000"</span></span>
+<span><span class="co">#&gt; [21] "2001" "2002" "2003" "2004" "2005" "2006" "2007" "2008" "2009" "2010"</span></span>
+<span><span class="co">#&gt; [31] "2011" "2012" "2013" "2014" "2015" "2016" "2017" "2018" "2019" "2020"</span></span>
+<span><span class="co">#&gt; [41] "2021" "2022"</span></span></code></pre></div>
 <p>To download a single years data (year 2001 in example) into a folder called “output” within your current directory</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>oisst<span class="op">::</span><span class="kw">get_oisst_data</span>(<span class="dt">years=</span><span class="dv">2001</span>,<span class="dt">outputStructure=</span><span class="ot">NULL</span>,<span class="dt">outputDir=</span>here<span class="op">::</span><span class="kw">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>oisst<span class="sc">::</span><span class="fu">get_oisst_data</span>(<span class="at">years=</span><span class="dv">2001</span>,<span class="at">outputStructure=</span><span class="cn">NULL</span>,<span class="at">outputDir=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
 <p>To download years 2000, …, 2010 into yearly folders within the “output” folder in current working directory:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>oisst<span class="op">::</span><span class="kw">get_oisst_data</span>(<span class="dt">years=</span><span class="dv">2000</span><span class="op">:</span><span class="dv">2010</span>,<span class="dt">outputStructure=</span><span class="st">"year"</span>,<span class="dt">outputDir=</span>here<span class="op">::</span><span class="kw">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>oisst<span class="sc">::</span><span class="fu">get_oisst_data</span>(<span class="at">years=</span><span class="dv">2000</span><span class="sc">:</span><span class="dv">2010</span>,<span class="at">outputStructure=</span><span class="st">"year"</span>,<span class="at">outputDir=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
 <p>To download years 2000, …, 2005 into a single folder within the “output” folder in current working directory:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>oisst<span class="op">::</span><span class="kw">get_oisst_data</span>(<span class="dt">years=</span><span class="dv">2000</span><span class="op">:</span><span class="dv">2005</span>,<span class="dt">outputStructure=</span><span class="ot">NULL</span>,<span class="dt">outputDir=</span>here<span class="op">::</span><span class="kw">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>oisst<span class="sc">::</span><span class="fu">get_oisst_data</span>(<span class="at">years=</span><span class="dv">2000</span><span class="sc">:</span><span class="dv">2005</span>,<span class="at">outputStructure=</span><span class="cn">NULL</span>,<span class="at">outputDir=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
 <p>To download all data into monthly folders within the “output” folder in current working directory:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>ooist<span class="op">::</span><span class="kw">get_oisst_data</span>(<span class="dt">years=</span><span class="ot">NULL</span>,<span class="dt">outputStructure=</span><span class="st">"month"</span>,<span class="dt">outputDir=</span>here<span class="op">::</span><span class="kw">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ooist<span class="sc">::</span><span class="fu">get_oisst_data</span>(<span class="at">years=</span><span class="cn">NULL</span>,<span class="at">outputStructure=</span><span class="st">"month"</span>,<span class="at">outputDir=</span>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output"</span>))</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="contact">Contact<a class="anchor" aria-label="anchor" href="#contact"></a>
 </h2>
 <table class="table">
+<colgroup><col width="100%"></colgroup>
 <thead><tr class="header">
 <th><a href="https://github.com/andybeet" class="external-link">andybeet</a></th>
 </tr></thead>
@@ -164,7 +165,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>

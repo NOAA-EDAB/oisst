@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 ![gitleaks](https://github.com/NOAA-EDAB/oisst/workflows/gitleaks/badge.svg)
-[![gh-pages](https://github.com/andybeet/oisst/actions/workflows/pkgdown.yml/badge.svg)](https://github.com/andybeet/oisst/actions/workflows/pkgdown.yml)
+[![gh-pages](https://github.com/NOAA-EDAB/oisst/actions/workflows/pkgdown.yml/badge.svg)](https://github.com/NOAA-EDAB/oisst/actions/workflows/pkgdown.yml)
 <!-- badges: end -->
 
 The goal of `oisst` is to easily download [Optimum Interpolation Sea
@@ -19,7 +19,7 @@ Currently uses OISST v2.1
 ## Installation
 
 ``` r
-remotes::install_github("andybeet/oisst")
+remotes::install_github("NOAA-EDAB/oisst")
 ```
 
 ## Usage

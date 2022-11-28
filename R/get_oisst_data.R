@@ -34,7 +34,7 @@ get_oisst_data <- function(years=2000,outputStructure=NULL,outputDir){
     fileStructure <- find_file_structure(years)
   }
 
-  # ouput folder is declared by user
+  # output folder is declared by user
   # This is created on users machine
   if(!dir.exists(outputDir)){
     dir.create(outputDir,recursive=TRUE)
@@ -88,7 +88,7 @@ get_oisst_data <- function(years=2000,outputStructure=NULL,outputDir){
        } else { # use year or month 
          destfile <- file.path(outputDir,folPath,afname)
        }
-
+       
        # get file, catch error for missing file
        result <- tryCatch(
          {

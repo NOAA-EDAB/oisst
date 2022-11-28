@@ -38,6 +38,7 @@ find_file_structure <- function(years=NULL){
   numberBackSlash <- stringr::str_count(files,"\\/")
   files <- files[numberBackSlash==1]
   folders <- as.vector(simplify2array(strsplit(files,"\\/"))[1,])
+  folders <- stringr::str_trim(folders)
 
   # spick out the folder based on the years required
   if (is.null(years)){
@@ -61,12 +62,15 @@ find_file_structure <- function(years=NULL){
     webPageNode <- xml2::read_html(monthDataPath)
     webPage <- xml2::xml_text(webPageNode)
     webPage <- strsplit(webPage,"\\s+")
+    
     # pick out file names
     index <- sapply(webPage[[1]],grepl,pattern="\\.nc")
     files <- webPage[[1]][index]
+    files <- strsplit(files,"oisst")
+    files <- simplify2array(files)[2,]
     files <- strsplit(files,"\\.nc")
     files <- simplify2array(files)[1,]
-    files <- paste0(files,".nc")
+    files <- paste0("oisst",files,".nc")
     fileStructure[[afol]] <- files
   }
   

@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 [![gh-pages](https://github.com/andybeet/oisst/actions/workflows/pkgdown.yml/badge.svg)](https://github.com/andybeet/oisst/actions/workflows/pkgdown.yml)
 <!-- badges: end -->
 
-The goal of `oisst` is to easily download [Optimum Interpolation Sea Surface Temperature (OISST)](https://www.ncdc.noaa.gov/oisst) data hosted by National Oceanic and Atmospheric Administration (NOAA). 
+The goal of `oisst` is to easily download [Optimum Interpolation Sea Surface Temperature (OISST)](https://www.ncei.noaa.gov/products/optimum-interpolation-sst) data hosted by National Oceanic and Atmospheric Administration (NOAA). 
+
+Currently uses OISST v2.1
 
 ## Installation
 

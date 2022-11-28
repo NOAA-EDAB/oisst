@@ -10,8 +10,11 @@
 <!-- badges: end -->
 
 The goal of `oisst` is to easily download [Optimum Interpolation Sea
-Surface Temperature (OISST)](https://www.ncdc.noaa.gov/oisst) data
-hosted by National Oceanic and Atmospheric Administration (NOAA).
+Surface Temperature
+(OISST)](https://www.ncei.noaa.gov/products/optimum-interpolation-sst)
+data hosted by National Oceanic and Atmospheric Administration (NOAA).
+
+Currently uses OISST v2.1
 
 ## Installation
 

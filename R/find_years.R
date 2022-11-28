@@ -26,7 +26,8 @@ find_years <- function(){
   numberBackSlash <- stringr::str_count(files,"\\/")
   files <- files[numberBackSlash==1]
   folders <- simplify2array(strsplit(files,"\\/"))[1,]
-  
+  # trim whitespace
+  folders <- stringr::str_trim(folders)
   # folder names are yyyymm. Split to obtain years
   years <- stringr::str_sub(folders,start = 1, end = 4)
   
